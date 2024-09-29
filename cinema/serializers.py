@@ -68,7 +68,7 @@ class MovieSessionListSerializer(serializers.ModelSerializer):
             "movie_title",
             "cinema_hall_name",
             "cinema_hall_capacity"
-            )
+        )
 
 
 class MovieSessionRetrieveSerializer(MovieSessionSerializer):

@@ -1,5 +1,3 @@
-from django.db.backends.utils import names_digest
-from django.db.models import CharField
 from rest_framework import serializers
 
 from cinema.models import Actor, CinemaHall, Genre, Movie, MovieSession
@@ -24,12 +22,14 @@ class CinemaHallSerializer(serializers.ModelSerializer):
         model = CinemaHall
         fields = ("id", "name", "rows", "seats_in_row", "capacity")
 
+
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = (
             "id", "title", "description", "duration", "genres", "actors"
         )
+
 
 class MovieListSerializer(MovieSerializer):
     genres = serializers.SlugRelatedField(

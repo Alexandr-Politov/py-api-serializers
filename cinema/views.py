@@ -1,3 +1,4 @@
+from django.contrib.gis.serializers.geojson import Serializer
 from rest_framework import viewsets
 
 from cinema.models import Actor, Genre, CinemaHall, Movie, MovieSession
